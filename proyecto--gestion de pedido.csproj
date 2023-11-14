@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{607E4FA1-B21E-4633-BB49-AC296DC77D76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>proyecto__gestion_de_pedido</RootNamespace>
+    <AssemblyName>proyecto--gestion de pedido</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Datos_pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos_pedidos.Designer.cs">
+      <DependentUpon>Datos_pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="factura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>factura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion usuario.Designer.cs">
+      <DependentUpon>Gestion usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gestionar bebidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestionar bebidas.Designer.cs">
+      <DependentUpon>gestionar bebidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gestionar mesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestionar mesa.Designer.cs">
+      <DependentUpon>gestionar mesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar mesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar mesero.Designer.cs">
+      <DependentUpon>Gestionar mesero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestionar platos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar platos.Designer.cs">
+      <DependentUpon>Gestionar platos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_reporte.Designer.cs">
+      <DependentUpon>Gestion_reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu-cajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu-cajero.Designer.cs">
+      <DependentUpon>menu-cajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_administrador.Designer.cs">
+      <DependentUpon>menu_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query.cs" />
+    <Compile Include="Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Datos_pedidos.resx">
+      <DependentUpon>Datos_pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="factura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>factura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion usuario.resx">
+      <DependentUpon>Gestion usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gestionar bebidas.resx">
+      <DependentUpon>gestionar bebidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gestionar mesa.resx">
+      <DependentUpon>gestionar mesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar mesero.resx">
+      <DependentUpon>Gestionar mesero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar platos.resx">
+      <DependentUpon>Gestionar platos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_reporte.resx">
+      <DependentUpon>Gestion_reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu-cajero.resx">
+      <DependentUpon>menu-cajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu_administrador.resx">
+      <DependentUpon>menu_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12012.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
